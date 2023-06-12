@@ -38,10 +38,12 @@
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
-    "sass": "latest",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "sass": "^1.62.1"
   }
 }

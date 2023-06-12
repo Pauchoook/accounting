@@ -9,3 +9,11 @@
    align-items: center;
    justify-content: space-between;
 }
+
+@mixin hover {
+   @media (any-hover: hover) {
+     &:hover {
+       @content;
+     }
+   }
+ }

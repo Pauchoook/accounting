@@ -1,5 +1,108 @@
 <header class="header">
-    <div class="container">
-        
+  <div class="container header__container">
+    <a href="index.html" class="header__logo">
+      <img src="@img/logos/logo.png" alt="Логотип" class="header__logo-img" />
+    </a>
+    <nav class="header__nav" id="burger-menu">
+      <button class="btn header__burger-close" id="burger-close">
+        <span class="header__burger-line-close"></span>
+        <span class="header__burger-line-close"></span>
+      </button>
+      <ul class="list header__nav-list">
+        <li class="dropdown header__dropdown">
+          <button class="btn dropdown__btn">
+            Услуги
+            <svg class="dropdown__icon">
+              <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <div class="dropdown__item header__dropdown-item">
+            <ul class="list header__dropdown-list">
+              <li>
+                <a href="#">Консультация</a>
+              </li>
+              <li>
+                <a href="#">Разработка учетной политики</a>
+              </li>
+              <li>
+                <a href="#">Ведение бухгалтерского учета</a>
+              </li>
+              <li>
+                <a href="#">Декларации 3НДФЛ</a>
+              </li>
+              <li>
+                <a href="#">Аутсорсинг функций главного бухгалтера</a>
+              </li>
+              <li>
+                <a href="#">Аутсорсинг функций главного бухгалтера</a>
+              </li>
+              <li>
+                <a href="#">Взаимодействие с ИФНС и фондами</a>
+              </li>
+              <li>
+                <a href="#">Восстановление бухгалтерского учета</a>
+              </li>
+              <li>
+                <a href="#">Сопровождение ИП</a>
+              </li>
+              <li>
+                <a href="#">Сдача «нулевой отчетности»</a>
+              </li>
+              <li>
+                <a href="#">Восстановление бухгалтерского учета</a>
+              </li>
+              <li>
+                <a href="#">Сопровождение ИП</a>
+              </li>
+              <li>
+                <a href="#">Сдача «нулевой отчетности»</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">Отзывы</a>
+        </li>
+        <li>
+          <a href="#">О нас</a>
+        </li>
+        <li>
+          <a href="#">Вопрос-ответ</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+      <div class="header__contacts">
+        <div class="header__contacts-wrapper-time">
+          <div class="header__contacts-time">
+            <svg class="header__contacts-icon header__contacts-icon--time">
+              <use xlink:href="img/icons/icons.svg#icon-time"></use>
+            </svg>
+            <time> 09:00 - 18:00 </time>
+          </div>
+          <p class="header__contacts-days">пн вт ср чт пт <span>сб вс</span></p>
+        </div>
+        <a href="tel:+78125650570" class="header__contacts-btn">
+          <svg class="header__contacts-icon">
+            <use xlink:href="img/icons/icons.svg#icon-tel"></use>
+          </svg>
+          +7 (812) 565-05-70
+        </a>
+      </div>
+      <button class="btn btn-primary header__order-btn">Заказать звонок</button>
+    </nav>
+    <div class="header__mobile-menu">
+      <a href="#" class="header__social-link">
+        <svg class="header__social-icon">
+          <use xlink:href="img/icons/icons.svg#icon-whats"></use>
+        </svg>
+      </a>
+      <button class="btn header__burger-btn" id="burger-btn">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
     </div>
+  </div>
 </header>

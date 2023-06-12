@@ -4,11 +4,14 @@
 @import "./base/settings";
 @import "./base/media";
 @import "./base/body-config";
-@import "./base/config-container";
+@import "./base/container-config";
 
 // ui
 @import "./ui/button";
 @import "./ui/list";
+
+// mini-components
+@import "./mini-components/dropdown";
 
 // components
 @import "./components/footer";
