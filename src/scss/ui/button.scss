@@ -16,6 +16,15 @@
   line-height: 15px;
   color: white;
   transition: color 0.2s ease, background-color 0.2s ease;
+  &.btn-white {
+    background-color: white;
+    border: 1px solid white;
+    color: var(--primary);
+    @include hover {
+      background-color: transparent;
+      color: white;
+    }
+  }
   @include hover {
     background-color: transparent;
     color: var(--primary);
