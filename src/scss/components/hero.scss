@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  padding: 150px 0px;
+  @include laptop {
+    padding: 110px 0px;
+  }
+  @include tablet {
+    padding: 90px 0px;
+  }
+  @include mobile {
+    padding-top: 465px;
+  }
+  &__container {
+    display: flex;
+    align-items: stretch;
+    column-gap: 20px;
+    @include laptop {
+      display: block;
+    }
+  }
+  &__img {
+    width: 540px;
+    height: 455px;
+    object-fit: cover;
+    @include laptop {
+      display: block;
+      width: 70%;
+      object-position: 50% 0%;
+      margin-bottom: 30px;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      height: 420px;
+    }
+    @include mobile {
+      position: absolute;
+      width: 100%;
+      height: 370px;
+      top: 87px;
+      left: 0;
+      right: 0;
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin: 0;
+    font-size: 58px;
+    line-height: 110%;
+    flex: 1;
+    @include desktop {
+      font-size: 52px;
+    }
+    @include laptop {
+      margin-bottom: 30px;
+    }
+    @include laptop-min {
+      font-size: 44px;
+    }
+    @include tablet {
+      font-size: 28px;
+    }
+    @include mobile {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 12px;
+    }
+  }
+  &__info-bottom {
+    padding-top: 20px;
+    @include laptop {
+      padding-top: 0;
+    }
+  }
+  &__info-content {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--dove-gray);
+    margin: 0px 0px 30px 0px;
+    @include mobile {
+      max-width: 300px;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 25px;
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 25px;
+  }
+  &__form-item {
+    flex: 0 1 calc(100% / 3 - 10px);
+    @include desktop {
+      flex-basis: calc(50% - 10px);
+    }
+    @include laptop {
+      flex-basis: calc(100% / 3 - 10px);
+    }
+    @include tablet {
+      flex-basis: calc(50% - 7px);
+    }
+    @include mobile-min {
+      flex-basis: 100%;
+    }
+  }
+  &__form-btn {
+    flex: 0 1 calc(100% / 3 - 10px);
+    @include desktop {
+      flex-basis: 100%;
+    }
+    @include laptop {
+      flex-basis: calc(100% / 3 - 10px);
+    }
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+}

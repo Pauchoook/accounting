@@ -6,6 +6,9 @@
   background-color: white;
   padding: 25px 0px;
   z-index: 100;
+  @include laptop-min {
+    padding: 20px 0px;
+  }
   &__container {
     display: flex;
   }
@@ -112,11 +115,6 @@
     }
     @include desktop {
       column-gap: 20px;
-      a,
-      button {
-        font-size: 12px;
-        line-height: 16px;
-      }
     }
     @include laptop-min {
       flex-direction: column;

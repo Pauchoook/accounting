@@ -1,0 +1,28 @@
+.form {
+  &__item {
+  }
+  &__input {
+    width: 100%;
+    border: 1px solid var(--dove-gray);
+    background-color: transparent;
+    border-radius: 0;
+    outline: none;
+    padding: 15px;
+
+    font-size: 16px;
+    line-height: 120%;
+    &::placeholder {
+      color: var(--silver);
+    }
+    @include mobile {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  &__btn {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
