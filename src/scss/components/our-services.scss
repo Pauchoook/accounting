@@ -1,0 +1,215 @@
+.our-services {
+  overflow: hidden;
+  padding-bottom: 45px;
+  &__title {
+    margin: 0px 0px 20px 0px;
+    @include mobile {
+      margin-bottom: 45px;
+    }
+  }
+  &__spollers {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 35px;
+    }
+    @include mobile {
+      border-bottom: none;
+    }
+  }
+  &__spoller {
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+  &__spoller-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 0px 10px 0px;
+    width: 100%;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 19px;
+      height: 1px;
+      background-color: var(--emperor);
+      right: 0;
+    }
+    &::after {
+      transform: rotate(90deg);
+      transition: transform 0.3s ease;
+    }
+    &._spoller-active {
+      &::after {
+        transform: rotate(0);
+      }
+    }
+    @include mobile {
+      padding: 0px 0px 19px 0px;
+      border-top: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__spoller-number {
+    flex: 0 1 50%;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    color: var(--emperor);
+    @include mobile {
+      display: none;
+    }
+  }
+  &__spoller-title {
+    flex: 0 1 50%;
+    font-size: 26px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    padding-right: 30px;
+    @include laptop {
+      font-size: 22px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+    @include mobile {
+      flex-basis: 100%;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    @include mobile-min {
+      flex-basis: 245px;
+    }
+  }
+  &__spoller-wrapper {
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+    @include laptop-min {
+      display: block;
+    }
+    @include mobile-min {
+      padding: 365px 0px 0px 0px;
+    }
+  }
+  &__spoller-img {
+    width: 440px;
+    height: 300px;
+    object-position: 50% 0%;
+    object-fit: cover;
+    @include laptop-min {
+      width: 640px;
+      height: 400px;
+      margin-bottom: 25px;
+    }
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
+    @include mobile-min {
+      position: absolute;
+      width: 100vw;
+      max-width: none;
+      left: -20px;
+      height: 300px;
+      top: 40px;
+      margin-bottom: 0;
+    }
+  }
+  &__spoller-info {
+    flex: 0 1 50%;
+    margin-left: auto;
+    @include laptop {
+      flex-basis: 450px;
+    }
+  }
+  &__spoller-list {
+    list-style: disc;
+    max-width: 325px;
+    margin-bottom: 35px;
+    padding-left: 15px;
+    @include laptop-min {
+      max-width: 600px;
+    }
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+  &__spoller-list-item {
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    color: var(--emperor);
+    @include laptop-min {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+  &__spoller-content {
+    margin: 0;
+    max-width: 445px;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    color: var(--emperor);
+    @include laptop-min {
+      max-width: none;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+  &__bottom {
+    width: 50%;
+    margin-left: auto;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__btn {
+    @include flex-between;
+    max-width: 475px;
+    width: 100%;
+    font-size: 26px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    color: var(--primary);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--blue-dark);
+    @include hover {
+      .our-services__btn-icon {
+        transform: translateX(5px);
+      }
+    }
+    @include laptop {
+      font-size: 22px;
+    }
+    @include tablet {
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+    @include mobile {
+      max-width: 280px;
+    }
+  }
+  &__btn-icon {
+    width: 30px;
+    height: 14px;
+    transition: transform 0.2s ease;
+    @include tablet {
+      width: 22px;
+    }
+  }
+}

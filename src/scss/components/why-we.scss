@@ -35,8 +35,8 @@
     }
     @include tablet {
       border-top: none;
+      padding-top: 0;
       flex-basis: 100%;
-      align-items: center;
     }
   }
   &__item-number {
