@@ -175,6 +175,8 @@
     width: 50%;
     margin-left: auto;
     @include mobile {
+      display: flex;
+      justify-content: center;
       width: 100%;
     }
   }

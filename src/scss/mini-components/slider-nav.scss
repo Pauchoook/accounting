@@ -1,0 +1,29 @@
+.slider-nav {
+  @include flex-center;
+  column-gap: 10px;
+  @include tablet {
+    column-gap: 20px;
+  }
+  &__btn {
+    width: 23px;
+    height: 11px;
+    color: var(--emperor);
+    &:first-child {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+    @include tablet {
+      width: 30px;
+      height: 14px;
+      color: var(--iridium);
+    }
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}

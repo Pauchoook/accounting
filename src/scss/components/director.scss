@@ -1,0 +1,131 @@
+.director {
+  padding-bottom: 100px;
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  @include mobile-min {
+    overflow: hidden;
+  }
+  &__title {
+    margin: 0px 0px 45px 0px;
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+  &__body {
+    display: flex;
+    column-gap: 60px;
+    @include laptop {
+      column-gap: 40px;
+    }
+    @include laptop-min {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    @include mobile-min {
+      position: relative;
+      padding-top: 420px;
+    }
+  }
+  &__img {
+    width: 400px;
+    height: auto;
+    @include laptop {
+      width: 300px;
+    }
+    @include mobile {
+      margin: 0 auto;
+    }
+    @include mobile-min {
+      position: absolute;
+      max-width: none;
+      width: 100vw;
+      height: 400px;
+      object-fit: cover;
+      object-position: 50% 0%;
+      left: -20px;
+      top: 0;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__wrapper {
+    display: flex;
+    column-gap: 95px;
+    flex: 1;
+    @include desktop {
+      column-gap: 40px;
+      justify-content: space-between;
+    }
+    @include laptop-min {
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+  }
+  &__content {
+    max-width: 365px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -0.015em;
+    @include laptop {
+      font-size: 16px;
+    }
+    @include tablet {
+      max-width: none;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  &__residence {
+    max-width: 215px;
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__residence-title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    margin: 0px 0px 15px 0px;
+    @include laptop-min {
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+  &__residence-list {
+    @include tablet {
+      padding-left: 15px;
+      list-style: disc;
+    }
+  }
+  &__residence-item {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 110%;
+    color: var(--emperor);
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    @include tablet {
+      font-style: italic;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 110%;
+    }
+  }
+  &__btn {
+    color: rgba(27, 63, 97, 0.86);
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+}

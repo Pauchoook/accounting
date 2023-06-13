@@ -1,0 +1,69 @@
+.personal-responsibility {
+  overflow: hidden;
+  padding-bottom: 180px;
+  @include laptop {
+    padding-bottom: 140px;
+  }
+  @include laptop-min {
+    padding-bottom: 100px;
+  }
+  @include tablet {
+    padding-bottom: 55px;
+  }
+  &__header {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin: 0;
+    max-width: 760px;
+  }
+  &__slider {
+    overflow: visible;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    @include tablet {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    @include mobile {
+      overflow: hidden;
+    }
+  }
+  &__slide {
+    width: 210px;
+    @include tablet {
+      width: calc(100% / 3 - 10px);
+    }
+    @include mobile {
+      width: calc(50% - 8px);
+    }
+  }
+  &__slide-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    margin-bottom: 20px;
+    @media (max-width: 419px) {
+      height: 200px;
+    }
+  }
+  &__slide-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 90%;
+    letter-spacing: -0.015em;
+    margin: 0px 0px 7px 0px;
+  }
+  &__slide-status {
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    color: var(--emperor);
+  }
+}

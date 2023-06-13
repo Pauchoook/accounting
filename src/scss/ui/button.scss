@@ -52,6 +52,21 @@
   @include tablet {
     font-size: 18px;
     padding-bottom: 5px;
+    &._fill {
+      justify-content: center;
+      max-width: none;
+      width: fit-content;
+      text-transform: uppercase;
+      padding: 16px 30px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 1px solid var(--primary);
+      font-size: 16px;
+      line-height: 120%;
+      .btn-arrow__icon {
+        display: none;
+      }
+    }
   }
   @include mobile {
     max-width: 280px;
