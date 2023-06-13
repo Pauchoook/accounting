@@ -1,0 +1,244 @@
+.footer {
+  color: var(--primary);
+  &__top {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    column-gap: 30px;
+    row-gap: 20px;
+    padding-top: 55px;
+    margin-bottom: 30px;
+    border-top: 1px solid black;
+    @include laptop {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      padding-top: 40px;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 160px;
+    @include mobile {
+      width: 140px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+  &__contacts {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    @include laptop {
+      order: 3;
+      flex-basis: 100%;
+      justify-content: end;
+    }
+    @include tablet {
+      justify-content: start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @include mobile-min {
+      justify-content: start;
+      align-items: start;
+    }
+  }
+  &__time {
+    display: flex;
+    column-gap: 8px;
+  }
+  &__icon-time {
+    width: 16px;
+    height: 16px;
+    stroke: white;
+  }
+  &__time-content {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+  }
+  &__time-days {
+    margin: 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.015em;
+    span {
+      color: var(--gray);
+    }
+  }
+  &__city {
+    display: block;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    margin-bottom: 5px;
+  }
+  &__number {
+    position: relative;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+      left: 0;
+      right: 100%;
+      bottom: -2px;
+      transition: right 0.2s ease;
+    }
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+  }
+  &__icon-number {
+    width: 15px;
+    height: 15px;
+  }
+  &__email {
+    position: relative;
+    align-self: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+      left: 0;
+      right: 100%;
+      bottom: -2px;
+      transition: right 0.2s ease;
+    }
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+    @include mobile {
+      align-self: start;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 8px;
+    @include laptop {
+      order: 2;
+    }
+  }
+  &__social-btn {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+    @include hover {
+      transform: scale(1.12) rotate(15deg);
+    }
+  }
+  &__social-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__nav {
+    margin-bottom: 30px;
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    a {
+      position: relative;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      text-transform: uppercase;
+      letter-spacing: -0.015em;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        background-color: currentColor;
+        left: 0;
+        right: 100%;
+        bottom: -2px;
+        transition: right 0.2s ease;
+      }
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+    }
+    @include laptop {
+      justify-content: end;
+    }
+    @include mobile {
+      row-gap: 35px;
+      li {
+        flex: 0 1 calc(50% - 10px);
+      }
+    }
+  }
+  &__bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px 0px;
+    border-top: 1px solid black;
+    @include tablet {
+      padding: 15px 0px 30px 0px;
+    }
+  }
+  &__bottom-list {
+    display: flex;
+    gap: 15px;
+    a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: -0.015em;
+      text-decoration-line: underline;
+      @include hover {
+        text-decoration: none;
+      }
+      @include tablet {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+  &__bottom-content {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: -0.015em;
+    @include laptop {
+      font-size: 16px;
+    }
+    @include mobile {
+      max-width: 300px;
+      font-size: 14px;
+    }
+  }
+}
