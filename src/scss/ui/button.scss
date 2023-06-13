@@ -30,3 +30,38 @@
     color: var(--primary);
   }
 }
+
+.btn-arrow {
+  @include flex-between;
+  max-width: 475px;
+  width: 100%;
+  font-size: 26px;
+  line-height: 110%;
+  letter-spacing: -0.015em;
+  color: var(--primary);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--blue-dark);
+  @include hover {
+    .btn-arrow__icon {
+      transform: translateX(5px);
+    }
+  }
+  @include laptop {
+    font-size: 22px;
+  }
+  @include tablet {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  @include mobile {
+    max-width: 280px;
+  }
+  &__icon {
+    width: 30px;
+    height: 14px;
+    transition: transform 0.2s ease;
+    @include tablet {
+      width: 22px;
+    }
+  }
+}

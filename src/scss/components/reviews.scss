@@ -1,0 +1,123 @@
+.reviews {
+  padding-bottom: 100px;
+  @include tablet {
+    padding-bottom: 50px;
+  }
+  &__header {
+    @include flex-between;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__slider {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px 10px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @include tablet {
+      padding: 25px 25px 45px 25px;
+      background-color: var(--primary);
+    }
+  }
+  &__icon {
+    display: block;
+    width: 14px;
+    height: 10px;
+    color: var(--emperor);
+    margin-bottom: 10px;
+    @include tablet {
+      color: white;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__slide-content {
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    margin: 0px 0px 50px 0px;
+    @include tablet {
+      color: white;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      margin-bottom: 0;
+      order: 2;
+    }
+  }
+  &__profile {
+    display: flex;
+    column-gap: 20px;
+    @include mobile {
+      order: 1;
+      margin-bottom: 30px;
+    }
+  }
+  &__profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__profile-name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    @include tablet {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 15px;
+    }
+  }
+  &__profile-from {
+    margin: 0;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+    color: var(--emperor);
+    @include tablet {
+      color: var(--gray-light);
+    }
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+  &__slider-nav {
+    @include flex-center;
+    column-gap: 10px;
+  }
+  &__slider-btn {
+    width: 23px;
+    height: 11px;
+    color: var(--emperor);
+    &--prev {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+    @include tablet {
+      width: 30px;
+      height: 14px;
+      color: var(--iridium);
+    }
+  }
+  &__slider-btn-icon {
+    width: 100%;
+    height: 100%;
+  }
+}

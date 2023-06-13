@@ -6,6 +6,9 @@
 @import "./base/body-config";
 @import "./base/container-config";
 
+// lib
+@import "./lib/swiper";
+
 // ui
 @import "./ui/button";
 @import "./ui/list";
@@ -23,5 +26,7 @@
 @import "./components/our-services";
 @import "./components/cost-maintenance";
 @import "./components/why-accounting";
+@import "./components/reviews";
+@import "./components/cases";
 
 @import "./components/header";
